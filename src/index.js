@@ -12,6 +12,10 @@ const map = new mapboxgl.Map({
   style: "mapbox://styles/mapbox/streets-v10" // mapbox has lots of different map styles available.
 });
 
-const newMarker = buildMarker("activities", [-74.009, 40.705]);
+// const newMarker = buildMarker("activities", [-74.009, 40.705]);
 
-newMarker.addTo(map);
+// newMarker.addTo(map);
+// only the marker for activities is working, before and after changes
+buildMarker("activities", [-74.009, 40.705]).addTo(map);
+buildMarker("hotels", [-74.009, 40.905]).addTo(map);
+buildMarker("restaurants", [-74.009, 41.205]).addTo(map);
